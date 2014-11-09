@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cyberabad Police Communication</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cyberabad Police Communication Network" />
+    <meta name="author" content="JC Brand" />
+    <meta name="keywords" content="xmpp chat webchat" />
+    <link rel="shortcut icon" type="image/ico" href="css/images/favicon.ico"/>
+    <link type="text/css" rel="stylesheet" media="screen" href="components/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" media="screen" href="components/fontawesome/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" media="screen" href="css/theme.css" />
+    <link type="text/css" rel="stylesheet" media="screen" href="css/converse.min.css" />
+    <!-- Only for development: <script data-main="main" src="components/requirejs/require.js"></script> -->
+    <![if gte IE 9]>
+        <script src="converse.js"></script>
+    <![endif]>
+    <script src="builds/converse.website.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="builds/converse.website-no-otr.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<h3 class="brand-heading">Cyberabad Police</h3>
+</body>
+
+<script type="text/javascript">
+</script>
+
+<script>
+    // Configuration loaded, so safe to make other require calls.
+    require(['converse'], function (converse) {
+        converse.initialize({
+            bosh_service_url: 'http://192.168.1.7:7070/http-bind/', // Please use this connection manager only for testing purposes
+            i18n: locales.en, // Refer to ./locale/locales.js to see which locales are supported
+            keepalive: true,
+            play_sounds: true,
+            prebind: false,
+            show_controlbox_by_default: true,
+            debug: true,
+            roster_groups: true
+        });
+    });
+</script>
+</html>
